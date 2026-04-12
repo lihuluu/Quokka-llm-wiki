@@ -3,6 +3,9 @@ site_description: 包装设计知识库
 site_author: Ethan Li
 site_url: https://lihuluu.github.io/Quokka-llm-wiki
 
+docs_dir: .
+site_dir: site
+
 theme:
   name: material
   language: zh
