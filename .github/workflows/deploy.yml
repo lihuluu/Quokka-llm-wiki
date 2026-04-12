@@ -133,3 +133,125 @@ jobs:
             --linear-border: rgba(0, 0, 0, 0.08);
             --linear-text: #0e0e10;
             --linear-text-secondary: #6e7681;
+}
+          
+          body {
+            background-color: var(--linear-bg) !important;
+            color: var(--linear-text) !important;
+            font-family: 'Inter', -apple-system, sans-serif !important;
+            -webkit-font-smoothing: antialiased;
+          }
+          
+          .md-sidebar {
+            background-color: var(--linear-bg) !important;
+            border-right: 1px solid var(--linear-border) !important;
+          }
+          
+          .md-nav__link {
+            color: var(--linear-text-secondary) !important;
+            font-weight: 450 !important;
+            font-size: 14px !important;
+            border-radius: 6px !important;
+            margin: 2px 8px !important;
+            padding: 6px 12px !important;
+          }
+          
+          .md-nav__link:hover, .md-nav__link--active {
+            color: var(--linear-text) !important;
+            background-color: var(--linear-bg-secondary) !important;
+          }
+          
+          .md-tabs { display: none !important; }
+          
+          .md-main, .md-content {
+            background-color: var(--linear-bg) !important;
+          }
+          
+          .md-content__inner {
+            max-width: 720px !important;
+            margin: 0 auto !important;
+            padding: 48px 32px !important;
+          }
+          
+          h1 {
+            font-size: 32px !important;
+            font-weight: 600 !important;
+            letter-spacing: -0.02em !important;
+            color: var(--linear-text) !important;
+            margin-bottom: 24px !important;
+          }
+          
+          h2 {
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            letter-spacing: -0.01em !important;
+            margin-top: 48px !important;
+          }
+          
+          h3 {
+            font-size: 17px !important;
+            font-weight: 600 !important;
+            margin-top: 32px !important;
+          }
+          
+          p {
+            font-size: 15px !important;
+            line-height: 1.7 !important;
+            color: var(--linear-text-secondary) !important;
+          }
+          
+          a {
+            color: #8b9bf0 !important;
+            text-decoration: none !important;
+          }
+          
+          a:hover { color: #a8b4ff !important; }
+          
+          pre {
+            background-color: var(--linear-bg-secondary) !important;
+            border: 1px solid var(--linear-border) !important;
+            border-radius: var(--linear-radius) !important;
+            padding: 16px !important;
+          }
+          
+          code {
+            font-family: 'JetBrains Mono', monospace !important;
+            font-size: 13px !important;
+            background-color: var(--linear-bg-secondary) !important;
+            border-radius: 4px !important;
+            padding: 2px 6px !important;
+          }
+          
+          blockquote {
+            border-left: 2px solid var(--linear-accent) !important;
+            background-color: var(--linear-bg-secondary) !important;
+            border-radius: 0 var(--linear-radius) var(--linear-radius) 0 !important;
+            padding: 12px 20px !important;
+          }
+          
+          table {
+            border: 1px solid var(--linear-border) !important;
+            border-radius: var(--linear-radius) !important;
+          }
+          
+          th {
+            background-color: var(--linear-bg-secondary) !important;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+          }
+          
+          ::-webkit-scrollbar { width: 6px; }
+          ::-webkit-scrollbar-thumb {
+            background: var(--linear-border) !important;
+            border-radius: 3px;
+          }
+          CSSEND
+      
+      - name: Build site
+        run: mkdocs build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
