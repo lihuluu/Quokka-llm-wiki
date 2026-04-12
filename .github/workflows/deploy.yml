@@ -41,7 +41,7 @@ jobs:
           cp -r queries docs/ 2>/dev/null || true
           cp -r raw docs/ 2>/dev/null || true
       
-      - name: Create mkdocs config
+      - name: Create Linear-style mkdocs config
         run: |
           cat > mkdocs.yml << 'EOF'
           site_name: Quokka Wiki
@@ -50,64 +50,54 @@ jobs:
           site_url: https://lihuluu.github.io/Quokka-llm-wiki
           docs_dir: docs
           site_dir: site
+          
           theme:
             name: material
             language: zh
             palette:
-              # 深色模式作为默认（更酷）
               - scheme: slate
-                primary: teal
-                accent: amber
+                primary: custom
+                accent: custom
                 toggle:
                   icon: material/brightness-7
-                  name: 切换到浅色模式
-              # 浅色模式切换
+                  name: Switch to light mode
               - scheme: default
-                primary: teal
-                accent: amber
+                primary: custom
+                accent: custom
                 toggle:
                   icon: material/brightness-4
-                  name: 切换到深色模式
+                  name: Switch to dark mode
+            font:
+              text: Inter
+              code: JetBrains Mono
             features:
-              - navigation.tabs
               - navigation.sections
-              - navigation.top
+              - navigation.expand
+              - navigation.instant
               - search.suggest
               - search.highlight
               - content.code.copy
-            font:
-              text: Noto Sans SC
-              code: JetBrains Mono
+          
           plugins:
             - search
             - roamlinks:
                 open_new_tab: true
+          
           markdown_extensions:
             - meta
             - toc:
                 permalink: true
             - admonition
             - pymdownx.details
-            - pymdownx.superfences:
-                custom_fences:
-                  - name: mermaid
-                    class: mermaid
-                    format: !!python/name:pymdownx.superfences.fence_code_format
-            - pymdownx.tabbed:
-                alternate_style: true
-            - pymdownx.inlinehilite
-            - pymdownx.snippets
+            - pymdownx.superfences
             - pymdownx.highlight:
                 anchor_linenums: true
-                line_spans: __span
-                pygments_lang_class: true
             - tables
             - footnotes
-          extra:
-            social:
-              - icon: fontawesome/brands/github
-                link: https://github.com/lihuluu
-            generator: false
+          
+          extra_css:
+            - stylesheets/linear.css
+          
           nav:
             - 首页: index.md
             - 实体:
@@ -123,11 +113,23 @@ jobs:
               - 可持续包装趋势: raw/articles/sustainable-packaging-trends-2025.md
           EOF
       
-      - name: Build site
-        run: mkdocs build
-      
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+      - name: Create Linear-style CSS
+        run: |
+          mkdir -p docs/stylesheets
+          cat > docs/stylesheets/linear.css << 'CSSEND'
+          :root {
+            --linear-bg: #0e0e10;
+            --linear-bg-secondary: #151518;
+            --linear-border: rgba(255, 255, 255, 0.08);
+            --linear-text: #f7f8f8;
+            --linear-text-secondary: #8a8f98;
+            --linear-accent: #5e6ad2;
+            --linear-radius: 8px;
+          }
+          
+          [data-md-color-scheme="default"] {
+            --linear-bg: #ffffff;
+            --linear-bg-secondary: #f8f9fa;
+            --linear-border: rgba(0, 0, 0, 0.08);
+            --linear-text: #0e0e10;
+            --linear-text-secondary: #6e7681;
