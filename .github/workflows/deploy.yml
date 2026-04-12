@@ -27,7 +27,9 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run: pip install mkdocs-material
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-roamlinks-plugin
       
       - name: Prepare docs structure
         run: |
@@ -52,26 +54,60 @@ jobs:
             name: material
             language: zh
             palette:
-              - scheme: default
-                primary: indigo
-                accent: indigo
+              # 深色模式作为默认（更酷）
               - scheme: slate
-                primary: indigo
-                accent: indigo
+                primary: teal
+                accent: amber
+                toggle:
+                  icon: material/brightness-7
+                  name: 切换到浅色模式
+              # 浅色模式切换
+              - scheme: default
+                primary: teal
+                accent: amber
+                toggle:
+                  icon: material/brightness-4
+                  name: 切换到深色模式
             features:
               - navigation.tabs
               - navigation.sections
+              - navigation.top
               - search.suggest
+              - search.highlight
+              - content.code.copy
+            font:
+              text: Noto Sans SC
+              code: JetBrains Mono
           plugins:
             - search
+            - roamlinks:
+                open_new_tab: true
           markdown_extensions:
             - meta
             - toc:
                 permalink: true
             - admonition
             - pymdownx.details
-            - pymdownx.superfences
+            - pymdownx.superfences:
+                custom_fences:
+                  - name: mermaid
+                    class: mermaid
+                    format: !!python/name:pymdownx.superfences.fence_code_format
+            - pymdownx.tabbed:
+                alternate_style: true
+            - pymdownx.inlinehilite
+            - pymdownx.snippets
+            - pymdownx.highlight:
+                anchor_linenums: true
+                line_spans: __span
+                pygments_lang_class: true
             - tables
+            - footnotes
+          extra:
+            social:
+              - icon: fontawesome/brands/github
+                link: https://github.com/lihuluu
+            generator: false
           nav:
             - 首页: index.md
             - 实体:
