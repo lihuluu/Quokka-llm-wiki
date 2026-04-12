@@ -31,9 +31,68 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-roamlinks-plugin
       
+      - name: Prepare docs structure
+        run: |
+          mkdir -p docs
+          cp *.md docs/ 2>/dev/null || true
+          cp -r entities docs/ 2>/dev/null || true
+          cp -r concepts docs/ 2>/dev/null || true
+          cp -r comparisons docs/ 2>/dev/null || true
+          cp -r queries docs/ 2>/dev/null || true
+          cp -r raw docs/ 2>/dev/null || true
+      
       - name: Build site
         run: |
-          cd $GITHUB_WORKSPACE
+          cat > mkdocs.yml << 'MKDOCS_CONFIG'
+          site_name: Quokka Wiki
+          site_description: 包装设计知识库
+          site_author: Ethan Li
+          site_url: https://lihuluu.github.io/Quokka-llm-wiki
+          
+          docs_dir: docs
+          site_dir: site
+          
+          theme:
+            name: material
+            language: zh
+            palette:
+              - scheme: default
+                primary: indigo
+                accent: indigo
+              - scheme: slate
+                primary: indigo
+                accent: indigo
+            features:
+              - navigation.tabs
+              - navigation.sections
+              - search.suggest
+          
+          plugins:
+            - search
+          
+          markdown_extensions:
+            - meta
+            - toc:
+                permalink: true
+            - admonition
+            - pymdownx.details
+            - pymdownx.superfences
+            - tables
+          
+          nav:
+            - 首页: index.md
+            - 实体:
+              - Perplexity: entities/perplexity.md
+              - Puma: entities/puma.md
+              - Smith & Diction: entities/smith-and-diction.md
+            - 概念:
+              - AI 品牌设计: concepts/ai-branding.md
+              - 单一材料设计: concepts/mono-material-design.md
+              - 可持续包装: concepts/sustainable-packaging.md
+            - 原始资料:
+              - Perplexity 品牌案例: raw/articles/perplexity-brand-redesign-uisdc.md
+              - 可持续包装趋势: raw/articles/sustainable-packaging-trends-2025.md
+          MKDOCS_CONFIG
           mkdocs build
       
       - name: Deploy to GitHub Pages
