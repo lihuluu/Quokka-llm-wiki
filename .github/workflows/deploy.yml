@@ -56,14 +56,14 @@ jobs:
             language: zh
             palette:
               - scheme: slate
-                primary: custom
-                accent: custom
+                primary: black
+                accent: indigo
                 toggle:
                   icon: material/brightness-7
                   name: Switch to light mode
               - scheme: default
-                primary: custom
-                accent: custom
+                primary: white
+                accent: indigo
                 toggle:
                   icon: material/brightness-4
                   name: Switch to dark mode
@@ -116,136 +116,136 @@ jobs:
       - name: Create Linear-style CSS
         run: |
           mkdir -p docs/stylesheets
-          cat > docs/stylesheets/linear.css << 'CSSEND'
-          :root {
-            --linear-bg: #0e0e10;
-            --linear-bg-secondary: #151518;
-            --linear-border: rgba(255, 255, 255, 0.08);
-            --linear-text: #f7f8f8;
-            --linear-text-secondary: #8a8f98;
-            --linear-accent: #5e6ad2;
-            --linear-radius: 8px;
-          }
-          
-          [data-md-color-scheme="default"] {
-            --linear-bg: #ffffff;
-            --linear-bg-secondary: #f8f9fa;
-            --linear-border: rgba(0, 0, 0, 0.08);
-            --linear-text: #0e0e10;
-            --linear-text-secondary: #6e7681;
-}
-          
-          body {
-            background-color: var(--linear-bg) !important;
-            color: var(--linear-text) !important;
-            font-family: 'Inter', -apple-system, sans-serif !important;
-            -webkit-font-smoothing: antialiased;
-          }
-          
-          .md-sidebar {
-            background-color: var(--linear-bg) !important;
-            border-right: 1px solid var(--linear-border) !important;
-          }
-          
-          .md-nav__link {
-            color: var(--linear-text-secondary) !important;
-            font-weight: 450 !important;
-            font-size: 14px !important;
-            border-radius: 6px !important;
-            margin: 2px 8px !important;
-            padding: 6px 12px !important;
-          }
-          
-          .md-nav__link:hover, .md-nav__link--active {
-            color: var(--linear-text) !important;
-            background-color: var(--linear-bg-secondary) !important;
-          }
-          
-          .md-tabs { display: none !important; }
-          
-          .md-main, .md-content {
-            background-color: var(--linear-bg) !important;
-          }
-          
-          .md-content__inner {
-            max-width: 720px !important;
-            margin: 0 auto !important;
-            padding: 48px 32px !important;
-          }
-          
-          h1 {
-            font-size: 32px !important;
-            font-weight: 600 !important;
-            letter-spacing: -0.02em !important;
-            color: var(--linear-text) !important;
-            margin-bottom: 24px !important;
-          }
-          
-          h2 {
-            font-size: 22px !important;
-            font-weight: 600 !important;
-            letter-spacing: -0.01em !important;
-            margin-top: 48px !important;
-          }
-          
-          h3 {
-            font-size: 17px !important;
-            font-weight: 600 !important;
-            margin-top: 32px !important;
-          }
-          
-          p {
-            font-size: 15px !important;
-            line-height: 1.7 !important;
-            color: var(--linear-text-secondary) !important;
-          }
-          
-          a {
-            color: #8b9bf0 !important;
-            text-decoration: none !important;
-          }
-          
-          a:hover { color: #a8b4ff !important; }
-          
-          pre {
-            background-color: var(--linear-bg-secondary) !important;
-            border: 1px solid var(--linear-border) !important;
-            border-radius: var(--linear-radius) !important;
-            padding: 16px !important;
-          }
-          
-          code {
-            font-family: 'JetBrains Mono', monospace !important;
-            font-size: 13px !important;
-            background-color: var(--linear-bg-secondary) !important;
-            border-radius: 4px !important;
-            padding: 2px 6px !important;
-          }
-          
-          blockquote {
-            border-left: 2px solid var(--linear-accent) !important;
-            background-color: var(--linear-bg-secondary) !important;
-            border-radius: 0 var(--linear-radius) var(--linear-radius) 0 !important;
-            padding: 12px 20px !important;
-          }
-          
-          table {
-            border: 1px solid var(--linear-border) !important;
-            border-radius: var(--linear-radius) !important;
-          }
-          
-          th {
-            background-color: var(--linear-bg-secondary) !important;
-            font-weight: 600 !important;
-            font-size: 13px !important;
-          }
-          
-          ::-webkit-scrollbar { width: 6px; }
-          ::-webkit-scrollbar-thumb {
-            background: var(--linear-border) !important;
-            border-radius: 3px;
-          }
-          CSSEND
+          printf '%s\n' \
+          ':root {' \
+          '  --linear-bg: #0e0e10;' \
+          '  --linear-bg-secondary: #151518;' \
+          '  --linear-border: rgba(255,255,255,0.08);' \
+          '  --linear-text: #f7f8f8;' \
+          '  --linear-text-secondary: #8a8f98;' \
+          '  --linear-accent: #5e6ad2;' \
+          '  --linear-radius: 8px;' \
+          '}' \
+          '' \
+          '[data-md-color-scheme="default"] {' \
+          '  --linear-bg: #ffffff;' \
+          '  --linear-bg-secondary: #f8f9fa;' \
+          '  --linear-border: rgba(0,0,0,0.08);' \
+          '  --linear-text: #0e0e10;' \
+          '  --linear-text-secondary: #6e7681;' \
+          '}' \
+          '' \
+          'body {' \
+          '  background-color: var(--linear-bg);' \
+          '  color: var(--linear-text);' \
+          '  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;' \
+          '  -webkit-font-smoothing: antialiased;' \
+          '}' \
+          '' \
+          '.md-sidebar {' \
+          '  background-color: var(--linear-bg);' \
+          '  border-right: 1px solid var(--linear-border);' \
+          '}' \
+          '' \
+          '.md-nav__link {' \
+          '  color: var(--linear-text-secondary);' \
+          '  font-weight: 450;' \
+          '  font-size: 14px;' \
+          '  border-radius: 6px;' \
+          '  margin: 2px 8px;' \
+          '  padding: 6px 12px;' \
+          '}' \
+          '' \
+          '.md-nav__link:hover, .md-nav__link--active {' \
+          '  color: var(--linear-text);' \
+          '  background-color: var(--linear-bg-secondary);' \
+          '}' \
+          '' \
+          '.md-tabs { display: none; }' \
+          '' \
+          '.md-main, .md-content {' \
+          '  background-color: var(--linear-bg);' \
+          '}' \
+          '' \
+          '.md-content__inner {' \
+          '  max-width: 720px;' \
+          '  margin: 0 auto;' \
+          '  padding: 48px 32px;' \
+          '}' \
+          '' \
+          'h1 {' \
+          '  font-size: 32px;' \
+          '  font-weight: 600;' \
+          '  letter-spacing: -0.02em;' \
+          '  color: var(--linear-text);' \
+          '  margin-bottom: 24px;' \
+          '}' \
+          '' \
+          'h2 {' \
+          '  font-size: 22px;' \
+          '  font-weight: 600;' \
+          '  letter-spacing: -0.01em;' \
+          '  margin-top: 48px;' \
+          '}' \
+          '' \
+          'h3 {' \
+          '  font-size: 17px;' \
+          '  font-weight: 600;' \
+          '  margin-top: 32px;' \
+          '}' \
+          '' \
+          'p {' \
+          '  font-size: 15px;' \
+          '  line-height: 1.7;' \
+          '  color: var(--linear-text-secondary);' \
+          '}' \
+          '' \
+          'a {' \
+          '  color: #8b9bf0;' \
+          '  text-decoration: none;' \
+          '}' \
+          '' \
+          'a:hover { color: #a8b4ff; }' \
+          '' \
+          'pre {' \
+          '  background-color: var(--linear-bg-secondary);' \
+          '  border: 1px solid var(--linear-border);' \
+          '  border-radius: var(--linear-radius);' \
+          '  padding: 16px;' \
+          '}' \
+          '' \
+          'code {' \
+          '  font-family: JetBrains Mono, monospace;' \
+          '  font-size: 13px;' \
+          '  background-color: var(--linear-bg-secondary);' \
+          '  border-radius: 4px;' \
+          '  padding: 2px 6px;' \
+          '}' \
+          '' \
+          'blockquote {' \
+          '  border-left: 2px solid var(--linear-accent);' \
+          '  background-color: var(--linear-bg-secondary);' \
+          '  border-radius: 0 var(--linear-radius) var(--linear-radius) 0;' \
+          '  padding: 12px 20px;' \
+          '}' \
+          '' \
+          'table {' \
+          '  border: 1px solid var(--linear-border);' \
+          '  border-radius: var(--linear-radius);' \
+          '}' \
+          '' \
+          'th {' \
+          '  background-color: var(--linear-bg-secondary);' \
+          '  font-weight: 600;' \
+          '  font-size: 13px;' \
+          '}' \
+          '' \
+          '::-webkit-scrollbar { width: 6px; }' \
+          '::-webkit-scrollbar-thumb {' \
+          '  background: var(--linear-border);' \
+          '  border-radius: 3px;' \
+          '}' \
+          > docs/stylesheets/linear.css
       
       - name: Build site
         run: mkdocs build
