@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "log.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "log"
+              "title": "index"
             }
           }
         ]
@@ -180,10 +180,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "d798f6267188e011",
+  "active": "098e4aac67bcdcb0",
   "lastOpenFiles": [
-    "你到家都八点半.md",
     "log.md",
+    "你到家都八点半.md",
     "README.md",
     "SCHEMA.md",
     "index.md",
