@@ -27,12 +27,20 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '实体', link: '/entities/perplexity' },
       { text: '概念', link: '/concepts/ai-branding' },
+      { text: '设计', link: '/Design/MUJI/design-system-report' },
       { text: 'GitHub', link: 'https://github.com/lihuluu/Quokka-llm-wiki' }
     ],
     
     // 侧边栏
     sidebar: {
       '/': [
+        {
+          text: '设计研究',
+          collapsed: false,
+          items: [
+            { text: 'MUJI 设计系统', link: '/Design/MUJI/design-system-report' }
+          ]
+        },
         {
           text: '实体',
           collapsed: false,
