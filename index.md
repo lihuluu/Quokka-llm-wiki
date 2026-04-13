@@ -2,12 +2,9 @@
 layout: home
 
 hero:
-  name: Quokka Wiki
+  name: "🦘 Quokka Wiki"
   text: 包装设计知识库
   tagline: 收集、整理、分享包装设计领域的知识、案例与洞察
-  image:
-    src: 🦘
-    alt: Quokka
   actions:
     - theme: brand
       text: 开始探索
