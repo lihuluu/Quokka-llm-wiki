@@ -14,28 +14,8 @@ export default defineConfig({
   // 最后更新时间
   lastUpdated: true,
   
-  // Markdown 配置
-  markdown: {
-    lineNumbers: true,
-    config: (md) => {
-      // 支持 Obsidian 风格的内部链接 [[链接]]
-      md.inline.ruler.after('link', 'obsidian-link', (state) => {
-        const regex = /\[\[([^\]]+)\]\]/g
-        let match
-        while ((match = regex.exec(state.src)) !== null) {
-          const token = new state.Token('link_open', 'a', 1)
-          token.attrs = [['href', `./${match[1].replace(/\s+/g, '-').toLowerCase()}`]]
-          state.tokens.push(token)
-          
-          const textToken = new state.Token('text', '', 0)
-          textToken.content = match[1]
-          state.tokens.push(textToken)
-          
-          state.tokens.push(new state.Token('link_close', 'a', -1))
-        }
-      })
-    }
-  },
+  // 忽略死链接检查（Obsidian 双向链接格式）
+  ignoreDeadLinks: true,
   
   // 主题配置
   themeConfig: {
