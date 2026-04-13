@@ -27,7 +27,6 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '实体', link: '/entities/perplexity' },
       { text: '概念', link: '/concepts/ai-branding' },
-      { text: '设计', link: '/Design/MUJI/design-system-report' },
       { text: 'GitHub', link: 'https://github.com/lihuluu/Quokka-llm-wiki' }
     ],
     
@@ -35,16 +34,10 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
-          text: '设计研究',
-          collapsed: false,
-          items: [
-            { text: 'MUJI 设计系统', link: '/Design/MUJI/design-system-report' }
-          ]
-        },
-        {
           text: '实体',
           collapsed: false,
           items: [
+            { text: 'MUJI', link: '/entities/muji/design-system-report' },
             { text: 'Perplexity', link: '/entities/perplexity' },
             { text: 'Puma', link: '/entities/puma' },
             { text: 'Smith & Diction', link: '/entities/smith-and-diction' }

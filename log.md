@@ -23,3 +23,13 @@
   - entities/smith-and-diction.md
   - concepts/ai-branding.md
 - Updated: index.md (7 pages total)
+
+## [2026-04-13] ingest | MUJI 设计系统深度解构
+- Source: raw/articles/muji-design-system-report-sources.md
+- Created pages:
+  - entities/muji/design-system-report.md
+  - raw/articles/muji-design-system-report-sources.md
+- Fixed: entities/puma.md (added missing frontmatter)
+- Updated: .vitepress/config.mjs (navigation)
+- Removed: Design/ directory (schema violation)
+- Updated: index.md (8 pages total)
