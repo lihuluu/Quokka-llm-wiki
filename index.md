@@ -1,20 +1,38 @@
-# Wiki Index
+---
+layout: home
 
-> 包装设计知识库目录
-> Last updated: 2025-01-12 | Total pages: 7
+hero:
+  name: Quokka Wiki
+  text: 包装设计知识库
+  tagline: 收集、整理、分享包装设计领域的知识、案例与洞察
+  image:
+    src: 🦘
+    alt: Quokka
+  actions:
+    - theme: brand
+      text: 开始探索
+      link: /entities/perplexity
+    - theme: alt
+      text: 查看概念
+      link: /concepts/ai-branding
 
-## Entities
-- [[perplexity]] — AI 搜索平台，品牌重塑案例
-- [[puma]] — 德国运动品牌，以创新可持续包装著称
-- [[smith-and-diction]] — 知名设计机构，个性化品牌设计
+features:
+  - icon: 📦
+    title: 品牌案例
+    details: 收集优秀的品牌设计案例，分析其设计策略与执行细节
+  - icon: 🎨
+    title: 设计概念
+    details: 整理包装设计领域的核心概念、方法论与趋势
+  - icon: 🔍
+    title: 深度研究
+    details: 对特定主题进行深入研究，形成系统性的知识总结
+  - icon: 🌱
+    title: 可持续包装
+    details: 关注环保与可持续设计，探索包装的未来发展方向
+---
 
-## Concepts
-- [[ai-branding]] — AI 产品品牌设计策略与挑战
-- [[mono-material-design]] — 单一材料设计理念，简化回收
-- [[sustainable-packaging]] — 全生命周期环境友好的包装方案
+## 关于
 
-## Comparisons
-<!-- 工艺对比、材料对比、案例对比等 -->
+Quokka Wiki 是一个专注于**包装设计**领域的个人知识库。这里收集了我研究过的品牌案例、设计概念、行业趋势等内容。
 
-## Queries
-<!-- 深度调研结果、综合分析等 -->
+知识库采用双向链接的方式组织内容，你可以在实体、概念、原始资料之间自由跳转，探索包装设计领域的知识网络。
