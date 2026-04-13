@@ -1,29 +1,32 @@
-# Wiki Schema
+# 知识库规范（Schema）
 
-## Domain
+## 领域范围
+
 包装设计知识库 — 涵盖设计理论、工艺技术、材料科学、市场趋势、品牌策略
 
-## Conventions
-- File names: lowercase, hyphens, no spaces (e.g., `offset-printing.md`)
-- Every wiki page starts with YAML frontmatter
-- Use `[[wikilinks]]` to link between pages (minimum 2 outbound links per page)
-- When updating a page, always bump the `updated` date
-- Every new page must be added to `index.md` under the correct section
-- Every action must be appended to `log.md`
+## 文件命名规范
 
-## Frontmatter
+- 文件名：小写字母、连字符、无空格（例如：`offset-printing.md`）
+- 每个页面必须以 YAML frontmatter 开头
+- 使用 `[[wikilinks]]` 在页面间建立链接（每页至少 2 个出站链接）
+- 更新页面时，必须更新 `updated` 日期
+- 每个新页面必须添加到 `index.md` 的正确分类下
+- 所有操作必须追加到 `log.md`
+
+## Frontmatter 格式
+
 ```yaml
 ---
-title: Page Title
+title: 页面标题
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 type: entity | concept | comparison | query | summary
-tags: [from taxonomy below]
-sources: [raw/articles/source-name.md]
+tags: [来自下方标签体系的标签]
+sources: [raw/articles/来源名称.md]
 ---
 ```
 
-## Tag Taxonomy
+## 标签体系
 
 ### 设计理论
 - design-theory, visual-hierarchy, typography, color-theory, minimalism, maximalism
@@ -49,37 +52,42 @@ sources: [raw/articles/source-name.md]
 ### 元标签
 - comparison, case-study, tutorial, glossary, prediction
 
-## Page Thresholds
-- **Create a page** when an entity/concept appears in 2+ sources OR is central to one source
-- **Add to existing page** when a source mentions something already covered
-- **DON'T create a page** for passing mentions, minor details
-- **Split a page** when it exceeds ~200 lines
-- **Archive a page** when content is fully superseded
+## 页面创建阈值
 
-## Entity Pages
-One page per notable实体. Include:
-- Overview / what it is
-- Key facts and dates
-- Relationships to other entities ([[wikilinks]])
-- Source references
+- **创建页面**：当一个实体/概念出现在 2+ 个来源中，或是某篇来源的核心主题
+- **添加到现有页面**：当来源提及已涵盖的内容时
+- **不要创建页面**：仅被简单提及的内容、次要细节
+- **拆分页面**：当页面超过约 200 行时
+- **归档页面**：当内容完全被替代时
 
-## Concept Pages
-One page per concept. Include:
-- Definition / explanation
-- Current state of knowledge
-- Open questions or debates
-- Related concepts ([[wikilinks]])
+## 实体页面（Entity）
 
-## Comparison Pages
-Side-by-side analyses. Include:
-- What is being compared and why
-- Dimensions of comparison (table format)
-- Verdict or synthesis
-- Sources
+每个值得记录的实体对应一个页面。包含：
+- 概述/定义
+- 关键事实与日期
+- 与其他实体的关系（[[wikilinks]]）
+- 来源引用
 
-## Update Policy
-When new information conflicts with existing content:
-1. Check dates — newer sources generally supersede older ones
-2. If genuinely contradictory, note both positions with dates and sources
-3. Mark contradiction in frontmatter: `contradictions: [page-name]`
-4. Flag for user review in lint report
+## 概念页面（Concept）
+
+每个概念对应一个页面。包含：
+- 定义/解释
+- 当前知识状态
+- 开放问题或争议
+- 相关概念（[[wikilinks]]）
+
+## 对比页面（Comparison）
+
+并排分析。包含：
+- 对比对象及原因
+- 对比维度（表格形式）
+- 结论或综合
+- 来源
+
+## 更新策略
+
+当新信息与现有内容冲突时：
+1. 检查日期 — 较新的来源通常优先于较旧的来源
+2. 如果确实存在矛盾，注明两种观点及其日期和来源
+3. 在 frontmatter 中标记：`contradictions: [页面名称]`
+4. 在 lint 报告中标记待用户审核
