@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "entities/perplexity.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "perplexity"
             }
           }
         ]
@@ -180,15 +180,18 @@
       "bases:新建数据库": false
     }
   },
-  "active": "098e4aac67bcdcb0",
+  "active": "d798f6267188e011",
   "lastOpenFiles": [
+    "未命名.md",
     "test-sync.md",
+    "typography-in-branding.md",
+    "entities/perplexity.md",
+    "SCHEMA.md",
+    "index.md",
     "mkdocs.yml",
     "raw/articles/obsidian-clippings",
     "log.md",
     "README.md",
-    "SCHEMA.md",
-    "index.md",
     "你到家都八点半.md",
     "raw/articles/sustainable-packaging-trends-2025.md",
     "raw/articles/perplexity-brand-redesign-uisdc.md",
@@ -198,7 +201,6 @@
     "concepts/mono-material-design.md",
     "concepts/ai-branding.md",
     "entities/smith-and-diction.md",
-    "entities/puma.md",
-    "entities/perplexity.md"
+    "entities/puma.md"
   ]
 }

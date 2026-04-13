@@ -55,15 +55,17 @@ jobs:
             name: material
             language: zh
             palette:
+              # Linear 风格深色模式
               - scheme: slate
-                primary: black
-                accent: indigo
+                primary: custom
+                accent: custom
                 toggle:
                   icon: material/brightness-7
                   name: Switch to light mode
+              # 浅色模式
               - scheme: default
-                primary: white
-                accent: indigo
+                primary: custom
+                accent: custom
                 toggle:
                   icon: material/brightness-4
                   name: Switch to dark mode
@@ -77,6 +79,7 @@ jobs:
               - search.suggest
               - search.highlight
               - content.code.copy
+            custom_dir: overrides
           
           plugins:
             - search
@@ -116,136 +119,254 @@ jobs:
       - name: Create Linear-style CSS
         run: |
           mkdir -p docs/stylesheets
-          printf '%s\n' \
-          ':root {' \
-          '  --linear-bg: #0e0e10;' \
-          '  --linear-bg-secondary: #151518;' \
-          '  --linear-border: rgba(255,255,255,0.08);' \
-          '  --linear-text: #f7f8f8;' \
-          '  --linear-text-secondary: #8a8f98;' \
-          '  --linear-accent: #5e6ad2;' \
-          '  --linear-radius: 8px;' \
-          '}' \
-          '' \
-          '[data-md-color-scheme="default"] {' \
-          '  --linear-bg: #ffffff;' \
-          '  --linear-bg-secondary: #f8f9fa;' \
-          '  --linear-border: rgba(0,0,0,0.08);' \
-          '  --linear-text: #0e0e10;' \
-          '  --linear-text-secondary: #6e7681;' \
-          '}' \
-          '' \
-          'body {' \
-          '  background-color: var(--linear-bg);' \
-          '  color: var(--linear-text);' \
-          '  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;' \
-          '  -webkit-font-smoothing: antialiased;' \
-          '}' \
-          '' \
-          '.md-sidebar {' \
-          '  background-color: var(--linear-bg);' \
-          '  border-right: 1px solid var(--linear-border);' \
-          '}' \
-          '' \
-          '.md-nav__link {' \
-          '  color: var(--linear-text-secondary);' \
-          '  font-weight: 450;' \
-          '  font-size: 14px;' \
-          '  border-radius: 6px;' \
-          '  margin: 2px 8px;' \
-          '  padding: 6px 12px;' \
-          '}' \
-          '' \
-          '.md-nav__link:hover, .md-nav__link--active {' \
-          '  color: var(--linear-text);' \
-          '  background-color: var(--linear-bg-secondary);' \
-          '}' \
-          '' \
-          '.md-tabs { display: none; }' \
-          '' \
-          '.md-main, .md-content {' \
-          '  background-color: var(--linear-bg);' \
-          '}' \
-          '' \
-          '.md-content__inner {' \
-          '  max-width: 720px;' \
-          '  margin: 0 auto;' \
-          '  padding: 48px 32px;' \
-          '}' \
-          '' \
-          'h1 {' \
-          '  font-size: 32px;' \
-          '  font-weight: 600;' \
-          '  letter-spacing: -0.02em;' \
-          '  color: var(--linear-text);' \
-          '  margin-bottom: 24px;' \
-          '}' \
-          '' \
-          'h2 {' \
-          '  font-size: 22px;' \
-          '  font-weight: 600;' \
-          '  letter-spacing: -0.01em;' \
-          '  margin-top: 48px;' \
-          '}' \
-          '' \
-          'h3 {' \
-          '  font-size: 17px;' \
-          '  font-weight: 600;' \
-          '  margin-top: 32px;' \
-          '}' \
-          '' \
-          'p {' \
-          '  font-size: 15px;' \
-          '  line-height: 1.7;' \
-          '  color: var(--linear-text-secondary);' \
-          '}' \
-          '' \
-          'a {' \
-          '  color: #8b9bf0;' \
-          '  text-decoration: none;' \
-          '}' \
-          '' \
-          'a:hover { color: #a8b4ff; }' \
-          '' \
-          'pre {' \
-          '  background-color: var(--linear-bg-secondary);' \
-          '  border: 1px solid var(--linear-border);' \
-          '  border-radius: var(--linear-radius);' \
-          '  padding: 16px;' \
-          '}' \
-          '' \
-          'code {' \
-          '  font-family: JetBrains Mono, monospace;' \
-          '  font-size: 13px;' \
-          '  background-color: var(--linear-bg-secondary);' \
-          '  border-radius: 4px;' \
-          '  padding: 2px 6px;' \
-          '}' \
-          '' \
-          'blockquote {' \
-          '  border-left: 2px solid var(--linear-accent);' \
-          '  background-color: var(--linear-bg-secondary);' \
-          '  border-radius: 0 var(--linear-radius) var(--linear-radius) 0;' \
-          '  padding: 12px 20px;' \
-          '}' \
-          '' \
-          'table {' \
-          '  border: 1px solid var(--linear-border);' \
-          '  border-radius: var(--linear-radius);' \
-          '}' \
-          '' \
-          'th {' \
-          '  background-color: var(--linear-bg-secondary);' \
-          '  font-weight: 600;' \
-          '  font-size: 13px;' \
-          '}' \
-          '' \
-          '::-webkit-scrollbar { width: 6px; }' \
-          '::-webkit-scrollbar-thumb {' \
-          '  background: var(--linear-border);' \
-          '  border-radius: 3px;' \
-          '}' \
-          > docs/stylesheets/linear.css
+          cat > docs/stylesheets/linear.css << 'CSSEND'
+          /* Linear.app 风格主题 */
+          
+          :root {
+            /* Linear 深色配色 */
+            --linear-bg: #0e0e10;
+            --linear-bg-secondary: #151518;
+            --linear-border: rgba(255, 255, 255, 0.08);
+            --linear-text: #f7f8f8;
+            --linear-text-secondary: #8a8f98;
+            --linear-accent: #5e6ad2;
+            --linear-accent-hover: #6872e3;
+            --linear-radius: 8px;
+            --linear-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          }
+          
+          /* 浅色模式覆盖 */
+          [data-md-color-scheme="default"] {
+            --linear-bg: #ffffff;
+            --linear-bg-secondary: #f8f9fa;
+            --linear-border: rgba(0, 0, 0, 0.08);
+            --linear-text: #0e0e10;
+            --linear-text-secondary: #6e7681;
+          }
+          
+          /* 全局背景 */
+          body {
+            background-color: var(--linear-bg) !important;
+            color: var(--linear-text) !important;
+            font-family: var(--linear-font) !important;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+          }
+          
+          /* 侧边栏 - Linear 风格 */
+          .md-sidebar {
+            background-color: var(--linear-bg) !important;
+            border-right: 1px solid var(--linear-border) !important;
+          }
+          
+          .md-sidebar__scrollwrap {
+            background-color: transparent !important;
+          }
+          
+          .md-nav__link {
+            color: var(--linear-text-secondary) !important;
+            font-weight: 450 !important;
+            font-size: 14px !important;
+            border-radius: 6px !important;
+            margin: 2px 8px !important;
+            padding: 6px 12px !important;
+          }
+          
+          .md-nav__link:hover {
+            color: var(--linear-text) !important;
+            background-color: var(--linear-bg-secondary) !important;
+          }
+          
+          .md-nav__link--active {
+            color: var(--linear-text) !important;
+            background-color: var(--linear-bg-secondary) !important;
+            font-weight: 500 !important;
+          }
+          
+          /* 隐藏顶部导航栏 - 极简 */
+          .md-header {
+            background-color: var(--linear-bg) !important;
+            border-bottom: 1px solid var(--linear-border) !important;
+            box-shadow: none !important;
+          }
+          
+          .md-tabs {
+            display: none !important;
+          }
+          
+          /* 主内容区 */
+          .md-main {
+            background-color: var(--linear-bg) !important;
+          }
+          
+          .md-content {
+            background-color: var(--linear-bg) !important;
+          }
+          
+          /* 文章卡片化 */
+          .md-content__inner {
+            max-width: 720px !important;
+            margin: 0 auto !important;
+            padding: 48px 32px !important;
+          }
+          
+          /* 标题 - Linear 风格细字体 */
+          h1 {
+            font-size: 32px !important;
+            font-weight: 600 !important;
+            letter-spacing: -0.02em !important;
+            color: var(--linear-text) !important;
+            margin-bottom: 24px !important;
+          }
+          
+          h2 {
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            letter-spacing: -0.01em !important;
+            color: var(--linear-text) !important;
+            margin-top: 48px !important;
+            margin-bottom: 16px !important;
+          }
+          
+          h3 {
+            font-size: 17px !important;
+            font-weight: 600 !important;
+            color: var(--linear-text) !important;
+            margin-top: 32px !important;
+          }
+          
+          /* 段落 */
+          p {
+            font-size: 15px !important;
+            line-height: 1.7 !important;
+            color: var(--linear-text-secondary) !important;
+            margin-bottom: 16px !important;
+          }
+          
+          /* 链接 - Linear 紫蓝色 */
+          a {
+            color: #8b9bf0 !important;
+            text-decoration: none !important;
+            font-weight: 450 !important;
+          }
+          
+          a:hover {
+            color: #a8b4ff !important;
+            text-decoration: underline !important;
+          }
+          
+          /* 代码块 - 卡片风格 */
+          pre {
+            background-color: var(--linear-bg-secondary) !important;
+            border: 1px solid var(--linear-border) !important;
+            border-radius: var(--linear-radius) !important;
+            padding: 16px !important;
+            margin: 20px 0 !important;
+          }
+          
+          code {
+            font-family: 'JetBrains Mono', monospace !important;
+            font-size: 13px !important;
+            background-color: var(--linear-bg-secondary) !important;
+            border-radius: 4px !important;
+            padding: 2px 6px !important;
+          }
+          
+          pre code {
+            background-color: transparent !important;
+            padding: 0 !important;
+          }
+          
+          /* 引用块 */
+          blockquote {
+            border-left: 2px solid var(--linear-accent) !important;
+            background-color: var(--linear-bg-secondary) !important;
+            border-radius: 0 var(--linear-radius) var(--linear-radius) 0 !important;
+            padding: 12px 20px !important;
+            margin: 20px 0 !important;
+          }
+          
+          /* 表格 - Linear 风格 */
+          table {
+            border-collapse: separate !important;
+            border-spacing: 0 !important;
+            border: 1px solid var(--linear-border) !important;
+            border-radius: var(--linear-radius) !important;
+            overflow: hidden !important;
+            margin: 20px 0 !important;
+          }
+          
+          th {
+            background-color: var(--linear-bg-secondary) !important;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            color: var(--linear-text) !important;
+            padding: 12px 16px !important;
+            border-bottom: 1px solid var(--linear-border) !important;
+          }
+          
+          td {
+            padding: 12px 16px !important;
+            border-bottom: 1px solid var(--linear-border) !important;
+            font-size: 14px !important;
+          }
+          
+          tr:last-child td {
+            border-bottom: none !important;
+          }
+          
+          /* 搜索框 - Linear 风格 */
+          .md-search__form {
+            background-color: var(--linear-bg-secondary) !important;
+            border: 1px solid var(--linear-border) !important;
+            border-radius: 6px !important;
+          }
+          
+          .md-search__input {
+            color: var(--linear-text) !important;
+            font-size: 14px !important;
+          }
+          
+          /* 侧边栏标题 */
+          .md-nav__title {
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+            color: var(--linear-text-secondary) !important;
+            padding: 20px 16px 8px !important;
+          }
+          
+          /* 滚动条 - 极简 */
+          ::-webkit-scrollbar {
+            width: 6px !important;
+            height: 6px !important;
+          }
+          
+          ::-webkit-scrollbar-track {
+            background: transparent !important;
+          }
+          
+          ::-webkit-scrollbar-thumb {
+            background: var(--linear-border) !important;
+            border-radius: 3px !important;
+          }
+          
+          ::-webkit-scrollbar-thumb:hover {
+            background: var(--linear-text-secondary) !important;
+          }
+          
+          /* 移动端适配 */
+          @media (max-width: 768px) {
+            .md-content__inner {
+              padding: 24px 20px !important;
+            }
+            
+            h1 {
+              font-size: 26px !important;
+            }
+          }
+          CSSEND
       
       - name: Build site
         run: mkdocs build
