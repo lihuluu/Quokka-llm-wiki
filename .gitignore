@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# VitePress
+.vitepress/dist/
+.vitepress/cache/
+
+# macOS
+.DS_Store
+
+# Obsidian（不需要同步到 Git）
+.obsidian/workspace.json
+.obsidian/graph.json
+.obsidian/plugins/
+
+# 日志
+*.log
+.backup.log

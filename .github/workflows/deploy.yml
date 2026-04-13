@@ -33,13 +33,10 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
-        run: |
-          npm install -g vitepress
-          npm install markdown-it-obsidian
+        run: npm ci
 
       - name: Build with VitePress
-        run: |
-          vitepress build
+        run: npm run docs:build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

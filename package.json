@@ -1,0 +1,22 @@
+{
+  "name": "quokka-wiki",
+  "version": "1.0.0",
+  "description": "包装设计知识库 - VitePress 文档站点",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "keywords": [
+    "packaging-design",
+    "wiki",
+    "knowledge-base",
+    "vitepress"
+  ],
+  "author": "Ethan Li",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.2"
+  }
+}
