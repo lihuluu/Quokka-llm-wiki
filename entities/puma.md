@@ -29,8 +29,8 @@ Puma 的可持续包装战略与其整体环保目标一致，旨在减少碳足
 
 ## 相关概念
 
-- [[sustainable-packaging|可持续包装]]
-- [[mono-material-design|单一材料设计]]
+- [可持续包装](/concepts/sustainable-packaging)
+- [单一材料设计](/concepts/mono-material-design)
 
 ## 来源
 

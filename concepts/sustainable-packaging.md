@@ -20,9 +20,9 @@ sources: [raw/articles/sustainable-packaging-trends-2025.md]
 - 可堆肥材料（PLA、淀粉基材料）
 
 ### 2. 设计可持续
-- [[mono-material-design]] — 单一材料简化回收
-- [[ink-reduction]] — 减墨印刷降低污染
-- [[lightweighting]] — 轻量化减少材料用量
+- [mono-material-design](/concepts/mono-material-design) — 单一材料简化回收
+- [ink-reduction](/ink-reduction) — 减墨印刷降低污染
+- [lightweighting](/lightweighting) — 轻量化减少材料用量
 
 ### 3. 生产可持续
 - 清洁能源生产
@@ -31,7 +31,7 @@ sources: [raw/articles/sustainable-packaging-trends-2025.md]
 
 ### 4. 回收可持续
 - 设计为回收（Design for Recycling）
-- 可重复使用系统（如 [[loop-platform]]）
+- 可重复使用系统（如 [loop-platform](/loop-platform)）
 - 堆肥基础设施兼容性
 
 ## 市场数据
@@ -45,6 +45,6 @@ sources: [raw/articles/sustainable-packaging-trends-2025.md]
 - 美国各州延拓责任法 (EPR)
 
 ## 相关概念
-- [[circular-economy]]
-- [[carbon-footprint]]
-- [[life-cycle-assessment]]
+- [circular-economy](/circular-economy)
+- [carbon-footprint](/carbon-footprint)
+- [life-cycle-assessment](/life-cycle-assessment)

@@ -18,7 +18,7 @@ AI 产品品牌设计面临独特挑战：
 ## 设计策略
 
 ### 1. 反科技感设计
-如 [[perplexity]] 案例所示，跳出传统科技蓝/紫的配色，引入温暖色调。
+如 [perplexity](/perplexity) 案例所示，跳出传统科技蓝/紫的配色，引入温暖色调。
 
 ### 2. 功能可视化
 将产品特性转化为视觉符号：
@@ -42,6 +42,6 @@ AI 产品 99% 是文字内容，品牌应该：
 - 从「品牌主导」转向「内容优先」
 
 ## 相关页面
-- [[perplexity]]
-- [[typography-in-branding]]
-- [[minimalist-branding]]
+- [perplexity](/perplexity)
+- [typography-in-branding](/typography-in-branding)
+- [minimalist-branding](/minimalist-branding)

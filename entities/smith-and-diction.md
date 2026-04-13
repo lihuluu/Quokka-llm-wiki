@@ -18,8 +18,8 @@ sources: [raw/articles/perplexity-brand-redesign-uisdc.md]
 - 注重细节和微观设计
 
 ## 代表案例
-- [[perplexity]] — AI 搜索平台品牌重塑
-- [[exposure]] — 完全重塑但看起来不具备侵略性的项目
+- [perplexity](/perplexity) — AI 搜索平台品牌重塑
+- [exposure](/exposure) — 完全重塑但看起来不具备侵略性的项目
 
 ## 设计哲学
 > "我们是一群喜欢有点个性的怪人"
@@ -27,5 +27,5 @@ sources: [raw/articles/perplexity-brand-redesign-uisdc.md]
 善于在限制中寻找创意，即使是"隐形"的品牌也能找到表达空间。
 
 ## 相关页面
-- [[perplexity]]
-- [[brand-design-process]]
+- [perplexity](/perplexity)
+- [brand-design-process](/brand-design-process)

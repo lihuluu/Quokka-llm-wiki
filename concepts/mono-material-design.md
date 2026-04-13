@@ -25,13 +25,13 @@ sources: [raw/articles/sustainable-packaging-trends-2025.md]
 - **成本控制**: 高性能单一材料可能比复合材料更贵
 
 ## 典型案例
-- [[puma]]: 100% 再生纸板鞋盒，无胶水折叠结构
-- [[evian]]: 100% rPET 矿泉水瓶
+- [puma](/puma): 100% 再生纸板鞋盒，无胶水折叠结构
+- [evian](/evian): 100% rPET 矿泉水瓶
 
 ## 相关概念
-- [[sustainable-packaging]]
-- [[recyclable-design]]
-- [[structural-design]]
+- [sustainable-packaging](/concepts/sustainable-packaging)
+- [recyclable-design](/recyclable-design)
+- [structural-design](/structural-design)
 
 ## 设计建议
 1. 首先审计现有包装的材料种类

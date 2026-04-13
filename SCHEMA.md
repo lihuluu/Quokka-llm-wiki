@@ -8,7 +8,7 @@
 
 - 文件名：小写字母、连字符、无空格（例如：`offset-printing.md`）
 - 每个页面必须以 YAML frontmatter 开头
-- 使用 `[[wikilinks]]` 在页面间建立链接（每页至少 2 个出站链接）
+- 使用 `[wikilinks](/wikilinks)` 在页面间建立链接（每页至少 2 个出站链接）
 - 更新页面时，必须更新 `updated` 日期
 - 每个新页面必须添加到 `index.md` 的正确分类下
 - 所有操作必须追加到 `log.md`
@@ -65,7 +65,7 @@ sources: [raw/articles/来源名称.md]
 每个值得记录的实体对应一个页面。包含：
 - 概述/定义
 - 关键事实与日期
-- 与其他实体的关系（[[wikilinks]]）
+- 与其他实体的关系（[wikilinks](/wikilinks)）
 - 来源引用
 
 ## 概念页面（Concept）
@@ -74,7 +74,7 @@ sources: [raw/articles/来源名称.md]
 - 定义/解释
 - 当前知识状态
 - 开放问题或争议
-- 相关概念（[[wikilinks]]）
+- 相关概念（[wikilinks](/wikilinks)）
 
 ## 对比页面（Comparison）
 

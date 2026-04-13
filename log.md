@@ -24,13 +24,12 @@
   - concepts/ai-branding.md
 - Updated: index.md (7 pages total)
 
-## [2026-04-13] ingest | MUJI 设计系统深度解构（新增 PDF 版本）
+## [2026-04-13] ingest | MUJI 设计系统深度解构
 - Source: raw/articles/muji-design-system-report-sources.md
 - Created pages:
   - entities/muji/design-system-report.md
-  - entities/muji/无印良品设计系统研究.pdf
   - raw/articles/muji-design-system-report-sources.md
 - Fixed: entities/puma.md (补全 frontmatter)
 - Updated: .vitepress/config.mjs (导航)
 - Removed: Design/ directory (违反 schema)
-- Updated: index.md (9 pages total)
+- Updated: index.md (8 pages total)

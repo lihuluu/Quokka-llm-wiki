@@ -24,8 +24,8 @@ sources: [raw/articles/muji-design-system-report-sources.md]
 本报告将基于深度的案例剖析与多维度的数据归纳，对无印良品的平面设计系统进行详尽的解构，涵盖其视觉哲学的历史演变、色彩架构的数理逻辑、字体排印的跨语言规范以及网格系统中的秩序美学。同时，报告将深入探究其包装设计系统，分析材料美学背后的工艺逻辑、信息架构的视觉层级、模数化结构的物理空间协同，以及在当前ESG战略下的可持续发展实践。通过对这两个系统的综合研究，揭示无印良品如何通过设计的力量，维持这一庞大跨国商业系统的稳定性、一致性与不可复制的品牌壁垒。
 
 **相关概念：**
-- [[sustainable-packaging|可持续包装]]
-- [[mono-material-design|单一材料设计]]
+- [可持续包装](/concepts/sustainable-packaging)
+- [单一材料设计](/concepts/mono-material-design)
 
 ---
 
