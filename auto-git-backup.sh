@@ -3,17 +3,27 @@
 
 cd ~/Dropbox/Quokka-llm-wiki
 
-# 检查是否有变更
-if git diff --quiet && git diff --cached --quiet; then
-    exit 0  # 无变更，退出
+# 检查是否有变更（包括未跟踪的新文件、删除、修改）
+if [ -z "$(git status --porcelain)" ]; then
+    exit 0  # 无任何变更，退出
 fi
 
 # 获取当前日期时间
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
-# 提交
-git add .
+# 添加所有相关变更（包括新增和删除）
+git add -A -- "*.md" "Design/" "concepts/" "entities/" "raw/" ".vitepress/" ".github/" "package.json" "index.md"
+
+# 提交（如果没有可提交的内容则跳过）
+if git diff --cached --quiet; then
+    exit 0
+fi
+
 git commit -m "backup: $DATE"
 
-# 推送（使用 SSH 跳过代理问题）
-GIT_SSH_COMMAND="ssh -o ProxyCommand=none" git push origin main 2>/dev/null || echo "Push failed at $DATE, will retry later"
+# 推送（先尝试 SSH，失败则切到 HTTPS 再试）
+if ! git push origin main 2>/dev/null; then
+    git remote set-url origin https://github.com/lihuluu/Quokka-llm-wiki.git
+    git push origin main 2>/dev/null || echo "Push failed at $DATE, will retry later"
+    git remote set-url origin git@github.com:lihuluu/Quokka-llm-wiki.git
+fi
