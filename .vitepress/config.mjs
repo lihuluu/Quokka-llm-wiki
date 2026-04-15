@@ -48,6 +48,8 @@ export default defineConfig({
           text: '概念',
           collapsed: false,
           items: [
+            { text: '设计师的21天挑战', link: '/concepts/designer-21-day-challenge' },
+            { text: '无可阻挡的21天挑战', link: '/concepts/unstoppable-21-day-challenge' },
             { text: 'AI 品牌设计', link: '/concepts/ai-branding' },
             { text: '单一材料设计', link: '/concepts/mono-material-design' },
             { text: '可持续包装', link: '/concepts/sustainable-packaging' }
@@ -57,6 +59,7 @@ export default defineConfig({
           text: '原始资料',
           collapsed: true,
           items: [
+            { text: '《无可阻挡的21天挑战》摘要', link: '/raw/articles/unstoppable-21-day-challenge-summary' },
             { text: 'Perplexity 品牌案例', link: '/raw/articles/perplexity-brand-redesign-uisdc' },
             { text: '可持续包装趋势', link: '/raw/articles/sustainable-packaging-trends-2025' }
           ]
