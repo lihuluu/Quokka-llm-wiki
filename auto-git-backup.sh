@@ -11,8 +11,8 @@ fi
 # 获取当前日期时间
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
-# 添加所有相关变更（包括新增和删除）
-git add -A -- "*.md" "Design/" "concepts/" "entities/" "raw/" ".vitepress/" ".github/" "package.json" "index.md"
+# 添加所有变更
+git add -A
 
 # 提交（如果没有可提交的内容则跳过）
 if git diff --cached --quiet; then
