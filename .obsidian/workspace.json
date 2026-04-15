@@ -11,10 +11,14 @@
             "id": "d798f6267188e011",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "concepts/sustainable-packaging.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sustainable-packaging"
             }
           }
         ]
@@ -178,17 +182,29 @@
   },
   "active": "d798f6267188e011",
   "lastOpenFiles": [
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/encode-html.d.ts.map",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/decode-data-html.js.map",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/decode-data-xml.js",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/decode-data-html.d.ts",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/decode-data-html.js",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/decode-data-xml.d.ts.map",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/encode-html.js",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/decode-data-xml.js.map",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/encode-html.d.ts",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/decode-data-xml.d.ts",
-    "node_modules/markdown-it/node_modules/entities/lib/esm/generated/encode-html.js.map",
+    "concepts/mono-material-design.md",
+    "concepts/ai-branding.md",
+    "assets/entities_puma.md.D51ErZKU.js",
+    "assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
+    "assets/inter-italic-latin-ext.CN1xVJS-.woff2",
+    "raw/articles/perplexity-brand-redesign-uisdc.md",
+    "raw/articles/sustainable-packaging-trends-2025.md",
+    "concepts/sustainable-packaging.md",
+    "raw/articles/muji-design-system-report-sources.md",
+    "entities/puma.md",
+    "entities/perplexity.md",
+    "entities/smith-and-diction.md",
+    "assets/README.md.tvqr_OeA.js",
+    "assets/chunks/VPLocalSearchBox.82Yr2YdF.js",
+    "assets/chunks/@localSearchIndexroot.01wlqnIR.js",
+    "assets/chunks/theme.DD7E03D8.js",
+    "assets/chunks/framework.CWO11jmo.js",
+    "index.md",
+    "auto-git-backup.sh",
+    "README.md",
+    "log.md",
+    "mkdocs.yml",
+    "SCHEMA.md",
     "node_modules/markdown-it/node_modules/entities/readme.md",
     "node_modules/ms/readme.md",
     "node_modules/@nolebase/markdown-it-bi-directional-links/README.md",
@@ -200,19 +216,6 @@
     "node_modules/tinyglobby/README.md",
     "node_modules/linkify-it/README.md",
     "node_modules/fsevents/README.md",
-    "node_modules/argparse/README.md",
-    "node_modules/markdown-it/README.md",
-    "node_modules/uc.micro/README.md",
-    "node_modules/colorette/LICENSE.md",
-    "node_modules/picomatch/README.md",
-    "node_modules/ms/license.md",
-    "node_modules/mdurl/README.md",
-    "concepts/mono-material-design.md",
-    "entities/muji/design-system-report.md",
-    "README.md",
-    "index.md",
-    "log.md",
-    "raw/articles/muji-design-system-report-sources.md",
-    "entities/puma.md"
+    "node_modules/argparse/README.md"
   ]
 }
