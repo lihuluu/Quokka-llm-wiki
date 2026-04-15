@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 
 export default defineConfig({
   title: 'Quokka Wiki',
@@ -107,5 +108,12 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap', rel: 'stylesheet' }]
-  ]
+  ],
+
+  // 支持 Obsidian 双向链接语法
+  markdown: {
+    config: (md) => {
+      md.use(BiDirectionalLinks())
+    }
+  }
 })

@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "node scripts/convert-wikilinks.cjs && vitepress build",
-    "docs:preview": "vitepress preview",
-    "convert-wikilinks": "node scripts/convert-wikilinks.cjs"
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "keywords": [
     "packaging-design",
@@ -18,6 +17,7 @@
   "author": "Ethan Li",
   "license": "MIT",
   "devDependencies": {
+    "@nolebase/markdown-it-bi-directional-links": "^2.18.2",
     "vitepress": "^1.0.2"
   }
 }
