@@ -1,7 +1,7 @@
 ---
 title: 无可阻挡的21天挑战
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-16
 type: concept
 tags: [productivity, workflow, ai-workflow]
 sources: [raw/articles/unstoppable-21-day-challenge-summary.md]
@@ -77,3 +77,6 @@ sources: [raw/articles/unstoppable-21-day-challenge-summary.md]
 ## 相关页面
 
 - [designer-21-day-challenge](/concepts/designer-21-day-challenge)
+- [anti-vision](/concepts/anti-vision)
+- [monk-mode](/concepts/monk-mode)
+- [entropy-in-life](/concepts/entropy-in-life)

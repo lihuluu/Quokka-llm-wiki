@@ -33,3 +33,13 @@
 - Updated: .vitepress/config.mjs (导航)
 - Removed: Design/ directory (违反 schema)
 - Updated: index.md (8 pages total)
+
+## [2026-04-16] ingest | How To Get Ahead Of 99% Of People
+- Source: raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md
+- Created pages:
+  - concepts/anti-vision.md
+  - concepts/entropy-in-life.md
+  - concepts/monk-mode.md
+- Updated: concepts/unstoppable-21-day-challenge.md, concepts/designer-21-day-challenge.md
+- Fixed: index.md (rebuilt from null bytes)
+- Status: expanding domain beyond packaging into personal systems & productivity

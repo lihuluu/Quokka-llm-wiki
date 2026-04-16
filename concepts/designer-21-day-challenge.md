@@ -1,7 +1,7 @@
 ---
 title: 设计师的21天挑战
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-16
 type: concept
 tags: [productivity, workflow, ai-workflow]
 sources: [raw/articles/unstoppable-21-day-challenge-summary.md, concepts/unstoppable-21-day-challenge.md]
@@ -140,3 +140,6 @@ sources: [raw/articles/unstoppable-21-day-challenge-summary.md, concepts/unstopp
 
 - [unstoppable-21-day-challenge](/concepts/unstoppable-21-day-challenge)
 - [ai-branding](/concepts/ai-branding)
+- [anti-vision](/concepts/anti-vision)
+- [monk-mode](/concepts/monk-mode)
+- [entropy-in-life](/concepts/entropy-in-life)
