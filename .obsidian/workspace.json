@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/designer-21-day-challenge.md",
+                "file": "log.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "designer-21-day-challenge"
+              "title": "log"
             }
           }
         ]
@@ -180,18 +180,18 @@
       "bases:新建数据库": false
     }
   },
-  "active": "098e4aac67bcdcb0",
+  "active": "d798f6267188e011",
   "lastOpenFiles": [
+    "README.md",
+    "SCHEMA.md",
+    "concepts/mono-material-design.md",
     "concepts/monk-mode.md",
+    "concepts/ai-branding.md",
+    "concepts/designer-21-day-challenge.md",
     "concepts/entropy-in-life.md",
     "concepts/anti-vision.md",
-    "concepts/ai-branding.md",
-    "SCHEMA.md",
     "raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md",
     "log.md",
-    "README.md",
-    "concepts/designer-21-day-challenge.md",
-    "concepts/mono-material-design.md",
     "concepts/sustainable-packaging.md",
     "concepts/unstoppable-21-day-challenge.md",
     "assets/entities_puma.md.D51ErZKU.js",
