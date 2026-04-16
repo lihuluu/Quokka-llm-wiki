@@ -11,14 +11,10 @@
             "id": "d798f6267188e011",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concepts/entropy-in-life.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "entropy-in-life"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -182,16 +178,18 @@
   },
   "active": "d798f6267188e011",
   "lastOpenFiles": [
+    "concepts/unstoppable-21-day-challenge.md",
+    "concepts/sustainable-packaging.md",
     "concepts/corrugated-flute-types.md",
+    "concepts/anti-vision.md",
+    "concepts/entropy-in-life.md",
     "raw/articles/corrugated-flute-types-guide.md",
     "concepts/cybernetics-intelligence.md",
     "concepts/human-3-0-model.md",
     "concepts/identity-driven-change.md",
     "raw/articles/how-to-fix-your-life-in-one-day.md",
     "concepts/monk-mode.md",
-    "concepts/entropy-in-life.md",
     "concepts/designer-21-day-challenge.md",
-    "concepts/anti-vision.md",
     "concepts/ai-branding.md",
     "index.md",
     "log.md",
@@ -199,8 +197,6 @@
     "SCHEMA.md",
     "concepts/mono-material-design.md",
     "raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md",
-    "concepts/sustainable-packaging.md",
-    "concepts/unstoppable-21-day-challenge.md",
     "assets/entities_puma.md.D51ErZKU.js",
     "assets/inter-italic-cyrillic-ext.r48I6akx.woff2",
     "assets/inter-italic-latin-ext.CN1xVJS-.woff2",
