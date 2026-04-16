@@ -32,7 +32,7 @@ sources: [raw/articles/来源名称.md]
 - design-theory, visual-hierarchy, typography, color-theory, minimalism, maximalism
 
 ### 材料与结构
-- material, paper, plastic, glass, metal, sustainable-packaging, structural-design
+- material, paper, plastic, glass, metal, corrugated-board, sustainable-packaging, structural-design
 
 ### 印刷工艺
 - printing, offset, digital-printing, screen-printing, flexography, gravure

@@ -8,6 +8,9 @@
 
 ### 设计理论与方法
 - [ai-branding](/concepts/ai-branding)
+
+### 材料与结构
+- [corrugated-flute-types](/concepts/corrugated-flute-types)
 - [mono-material-design](/concepts/mono-material-design)
 - [sustainable-packaging](/concepts/sustainable-packaging)
 

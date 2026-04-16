@@ -182,6 +182,8 @@
   },
   "active": "d798f6267188e011",
   "lastOpenFiles": [
+    "concepts/corrugated-flute-types.md",
+    "raw/articles/corrugated-flute-types-guide.md",
     "concepts/cybernetics-intelligence.md",
     "concepts/human-3-0-model.md",
     "concepts/identity-driven-change.md",
@@ -215,8 +217,6 @@
     "assets/chunks/framework.CWO11jmo.js",
     "auto-git-backup.sh",
     "mkdocs.yml",
-    "node_modules/markdown-it/node_modules/entities/readme.md",
-    "node_modules/ms/readme.md",
-    "node_modules/@nolebase/markdown-it-bi-directional-links/README.md"
+    "node_modules/markdown-it/node_modules/entities/readme.md"
   ]
 }

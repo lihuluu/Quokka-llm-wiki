@@ -57,3 +57,10 @@
   - concepts/designer-21-day-challenge.md (补充相关页面链接)
 - Updated: SCHEMA.md (新增个人系统与认知标签体系)
 - Updated: index.md (11 pages total)
+
+## [2026-04-16] ingest | 常见的瓦楞厚度
+- Source: raw/articles/corrugated-flute-types-guide.md
+- Created pages:
+  - concepts/corrugated-flute-types.md
+- Updated: SCHEMA.md (新增 corrugated-board 标签)
+- Updated: index.md (12 pages total)
