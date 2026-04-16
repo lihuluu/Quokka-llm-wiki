@@ -23,7 +23,10 @@
 
 ### 核心概念
 - [anti-vision](/concepts/anti-vision)
+- [cybernetics-intelligence](/concepts/cybernetics-intelligence)
 - [entropy-in-life](/concepts/entropy-in-life)
+- [human-3-0-model](/concepts/human-3-0-model)
+- [identity-driven-change](/concepts/identity-driven-change)
 - [monk-mode](/concepts/monk-mode)
 
 ### 工作流与实践

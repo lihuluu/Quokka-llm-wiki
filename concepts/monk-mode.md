@@ -4,7 +4,7 @@ created: 2026-04-16
 updated: 2026-04-16
 type: concept
 tags: [self-improvement, focus, productivity]
-sources: [raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md]
+sources: [raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md, raw/articles/how-to-fix-your-life-in-one-day.md]
 ---
 
 # Monk Mode（僧侣模式/消失模式）
@@ -33,9 +33,25 @@ Monk Mode 期间做的往往是外人看来极其无聊的事：每天写 30 分
 - **把孤立当目标**：Monk Mode 是为了产出，不是为了「看起来很努力」
 - **忽视系统**：没有日程系统和环境设计，仅靠意志力很难维持 6 个月以上
 
+## 把生活变成游戏：六个组成部分
+
+在 Monk Mode 期间，可以将所有专注的要素整理成一个"个人游戏系统"：
+
+1. **反愿景** — 我存在的祸根是什么？永远不想再经历的人生是什么？
+2. **愿景** — 我理想中的生活是什么样的？可以通过努力不断改善吗？
+3. **一年目标** — 一年后我的生活会是什么样子？是否更接近我想要的生活？
+4. **一个月项目** — 我需要学习什么？掌握哪些技能？可以构建什么来让我更接近一年目标？
+5. **日常关键** — 哪些是能够推动项目进展、使项目更接近完成的优先事项？
+6. **限制条件** — 为了从零开始实现愿景，我不愿意牺牲什么？
+
+这六个要素像同心圆一样，如力场般保护心灵免受干扰。反愿景是你失败时的惩罚，愿景是胜利条件，日常关键是每天的任务，限制条件则是激发创造力的规则。
+
 ## 相关页面
 
 - [anti-vision](/concepts/anti-vision)
 - [entropy-in-life](/concepts/entropy-in-life)
 - [unstoppable-21-day-challenge](/concepts/unstoppable-21-day-challenge)
 - [designer-21-day-challenge](/concepts/designer-21-day-challenge)
+- [identity-driven-change](/concepts/identity-driven-change)
+- [cybernetics-intelligence](/concepts/cybernetics-intelligence)
+- [human-3-0-model](/concepts/human-3-0-model)

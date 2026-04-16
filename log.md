@@ -43,3 +43,17 @@
 - Updated: concepts/unstoppable-21-day-challenge.md, concepts/designer-21-day-challenge.md
 - Fixed: index.md (rebuilt from null bytes)
 - Status: expanding domain beyond packaging into personal systems & productivity
+
+## [2026-04-16] ingest | 如何在 1 天之内修复你的人生
+- Source: raw/articles/how-to-fix-your-life-in-one-day.md
+- Created pages:
+  - concepts/identity-driven-change.md
+  - concepts/cybernetics-intelligence.md
+  - concepts/human-3-0-model.md
+- Updated pages:
+  - concepts/anti-vision.md (加入一天内的深度挖掘清单和愿景 MVP)
+  - concepts/monk-mode.md (加入游戏化人生的六个组成部分)
+  - concepts/unstoppable-21-day-challenge.md (补充相关页面链接)
+  - concepts/designer-21-day-challenge.md (补充相关页面链接)
+- Updated: SCHEMA.md (新增个人系统与认知标签体系)
+- Updated: index.md (11 pages total)

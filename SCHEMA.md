@@ -49,6 +49,9 @@ sources: [raw/articles/来源名称.md]
 ### 技术工具
 - software, ai-design, 3d-rendering, prototyping, dieline
 
+### 个人系统与认知
+- self-improvement, productivity, mental-energy, systems-thinking, focus, identity, cybernetics, flow, gamification, psychology
+
 ### 元标签
 - comparison, case-study, tutorial, glossary, prediction
 

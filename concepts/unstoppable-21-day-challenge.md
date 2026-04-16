@@ -80,3 +80,6 @@ sources: [raw/articles/unstoppable-21-day-challenge-summary.md]
 - [anti-vision](/concepts/anti-vision)
 - [monk-mode](/concepts/monk-mode)
 - [entropy-in-life](/concepts/entropy-in-life)
+- [identity-driven-change](/concepts/identity-driven-change)
+- [cybernetics-intelligence](/concepts/cybernetics-intelligence)
+- [human-3-0-model](/concepts/human-3-0-model)

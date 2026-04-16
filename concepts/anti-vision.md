@@ -4,7 +4,7 @@ created: 2026-04-16
 updated: 2026-04-16
 type: concept
 tags: [self-improvement, productivity, mental-energy]
-sources: [raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md]
+sources: [raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md, raw/articles/how-to-fix-your-life-in-one-day.md]
 ---
 
 # Anti-Vision（反愿景）
@@ -40,8 +40,46 @@ sources: [raw/How To Get Ahead Of 99% Of People (In 6-12 Months).md]
 3. 越具体越好：时间、地点、身体感受、周围人的反应
 4. 完成后，反过来看——愿景就藏在反面
 
+## 一天内的深度挖掘清单
+
+如果想在短时间内进行一次彻底的反愿景练习，可以按以下三部分进行：
+
+### 第一部分：上午 — 心理挖掘
+
+1. 你已经学会忍受的那种钓而持久的不满是什么？
+2. 你总是抱怨哪些事情，却从未真正改变过？
+3. 针对每一项抱怨：观察你行为的人会得出什么结论？
+4. 你现在的生活中有哪些真相是你无法向尊敬的人坦白的？
+5. 如果未来五年一切照旧，描述你平常的周二（越具体越好）。
+6. 把时间延长十年：你错过了什么？谁放弃了你？
+7. 站在生命尽头：你从未让自己感受过、尝试过、成为过什么？
+8. 身边有哪些人已经过着你刚才描述的生活？
+9. 为了真正改变，你需要放弃哪些身份？
+10. 你至今没有改变的最尴尬理由是什么？
+11. 如果你目前的行为是一种自我保护，你究竟在保护什么？
+
+### 第二部分：中午 — 打破自动驾驶
+
+在手机里设置一组随机提醒，整天向自己提问：
+- 我现在做的事究竟在逃避什么？
+- 如果有人拍摄了过去两小时，他会得出什么结论？
+- 我正在走向我讨厌的生活，还是我想要的生活？
+- 我假装不重要的最重要的事是什么？
+- 今天我做了哪些事是为了保护身份而非出于真心？
+- 今天我什么时候感觉最有活力？什么时候最麻木？
+
+### 第三部分：晚间 — 综合洞察
+
+1. 今天过后，你觉得自己一直陷入困境的最真实原因是什么？
+2. 真正的敌人是什么？不是环境，也不是别人，而是主导一切的内在模式或信念。
+3. 用一句话概括你绝不接受的生活现状——这就是你的反愿景。
+4. 用一句话概括你正在构建的目标（知道它会演变）——这就是你的愿景 MVP。
+
 ## 相关页面
 
 - [entropy-in-life](/concepts/entropy-in-life)
 - [monk-mode](/concepts/monk-mode)
 - [unstoppable-21-day-challenge](/concepts/unstoppable-21-day-challenge)
+- [identity-driven-change](/concepts/identity-driven-change)
+- [cybernetics-intelligence](/concepts/cybernetics-intelligence)
+- [human-3-0-model](/concepts/human-3-0-model)
