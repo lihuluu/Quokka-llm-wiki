@@ -1,6 +1,6 @@
 ---
 title: "Log"
-date: 2026-04-17
+date: 2026-04-18
 type: meta
 tags: ["system", "log"]
 ---
@@ -24,3 +24,16 @@ tags: ["system", "log"]
 - 创建 `overview.md`
 - 更新 `agents.md`
 - 重建目录：`concepts/`, `entities/`, `sources/`, `queries/`, `synthesis/`, `comparisons/`, `raw/sources/`, `raw/assets/`
+
+## 2026-04-18
+
+**Action**: ingest
+**Type**: source
+**Summary**: 导入 The Dieline 关于 Oishii Nikko Berry 新托盘包装的文章，建立首个包装案例，聚焦减塑、保鲜与真实回收之间的权衡。
+**Files**:
+- 创建 `raw/sources/oishii-nikko-berry-tray-is-a-step-forward-but-is-it-enough-2026-04-18.md`
+- 创建 `sources/oishii-nikko-berry-tray-is-a-step-forward-but-is-it-enough.md`
+- 创建 `entities/oishii.md`
+- 创建 `concepts/produce-top-seal-packaging.md`
+- 更新 `index.md`
+- 更新 `overview.md`
