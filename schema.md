@@ -1,82 +1,96 @@
-# 知识库规范（Schema）
+# Schema 规范
 
-## 三层架构
+本文件定义知识库的结构规范、元数据标准和维护协议。
 
-本知识库严格遵循 **LLM Wiki 三层架构**：
+---
 
-1. **Raw Sources** (`raw/sources/`) — 原始来源，未加工的剪藏、文章、报告
-2. **Wiki Pages** (`wiki/`) — 加工后的知识页面，按类型组织
-3. **Schema** (`schema.md`, `agents.md`, `purpose.md`) — 定义知识结构和 AI 操作规范
-
-## 目录结构
+## 1. 目录结构（三层架构）
 
 ```
 quokka-llm-wiki/
-├── purpose.md          # Wiki 的存在意义与关键问题
-├── schema.md           # 本文件：知识库结构规范
+├── purpose.md          # Wiki 的灵魂：目标、关键问题、研究范围
+├── schema.md           # 本文件：结构规范与元数据定义
+├── index.md            # 内容目录与 LLM 导航入口
+├── log.md              # 时序操作记录
+├── overview.md         # 全局摘要
 ├── agents.md           # AI 操作规范
-├── overview.md         # 全局摘要（每次 ingest 后更新）
-├── raw/
-│   ├── sources/        # 原始来源（不可变）
-│   └── assets/         # 本地图片等资源
-└── wiki/
-    ├── index.md          # 内容目录
-    ├── log.md            # 操作日志
-    ├── entities/         # 具体实体（品牌、产品、人物、项目）
-    ├── concepts/         # 概念、方法、原则
-    ├── sources/          # 来源摘要页（每篇 raw 的浓缩版）
-    ├── queries/          # 问答归档
-    ├── synthesis/        # 跨来源分析
-    └── comparisons/      # 对比页
+├── README.md           # 项目说明
+├── concepts/           # 概念与方法论
+├── entities/           # 品牌、产品、人物、组织
+├── sources/            # 来源摘要（对 raw/ 的结构化凝练）
+├── queries/            # 保存的问答结晶
+├── synthesis/          # 综合分析与流水线
+├── comparisons/        # 对比分析
+└── raw/
+    ├── sources/        # 原始来源素材（不可变）
+    └── assets/         # 本地图片资源
 ```
 
-## 页面类型
+**Critical rule**: 页面按类型统一存放，**NOT** 按主题/角色拆分。包装案例和品牌案例都存在同一个 `entities/` 下，角色通过 frontmatter 标签区分。
 
-| 类型 | 说明 | 位置 |
-|---|---|---|
-| `entity` | 具体实体：品牌、产品、人物、项目 | `wiki/entities/` |
-| `concept` | 抽象概念：方法、理论、原则 | `wiki/concepts/` |
-| `source` | 来源摘要：每篇 raw 的浓缩概述 | `wiki/sources/` |
-| `query` | 问答归档：高质量的问答结晶 | `wiki/queries/` |
-| `synthesis` | 跨来源分析：多篇来源的综合分析 | `wiki/synthesis/` |
-| `comparison` | 对比页：并排分析 | `wiki/comparisons/` |
+---
 
-## Frontmatter 格式
+## 2. Frontmatter 规范
+
+每个 wiki 页面必须包含标准化 frontmatter：
 
 ```yaml
 ---
-title: 页面标题
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-type: concept | entity | source | query | synthesis | comparison
-tags: [标签1, 标签2]
-role: packaging | branding | pm | soft-skills
-sources: [raw/sources/来源名称.md]
+title: "页面标题"
+date: 2026-04-17
+type: concept          # 必填：concept | entity | source | query | synthesis | comparison
+role: [packaging]      # 必填：pm | packaging | branding | soft-skills，支持多标签
+tags: ["标签1", "标签2"]
+sources: ["raw/sources/xxx.md"]   # 关联的原始来源（可选）
+related: ["concepts/yyy.md"]      # 关联的 wiki 页面（可选）
 ---
 ```
 
-## 四角色标签体系
+### 角色标签（role）
 
-**跨角色通用**：`case-study`, `tutorial`, `comparison`, `summary`, `insight`
+| 标签 | 含义 | 内容范围 |
+|---|---|---|
+| `pm` | 产品经理 | 用户需求、数据分析、策略、项目管理 |
+| `packaging` | 包装设计 | 包装材料、结构、工艺、趋势、案例 |
+| `branding` | 品牌设计 | 品牌视觉、VI、Logo、重塑、趋势 |
+| `soft-skills` | 软技能 | 习惯、思维、沟通、成长、系统 |
 
-**包装设计**：`material`, `structural-design`, `sustainable-packaging`, `mono-material`, `corrugated-board`, `printing`, `finishing`, `shelf-impact`, `unboxing`, `luxury-packaging`
+### 页面类型（type）
 
-**品牌设计**：`brand-identity`, `visual-system`, `rebrand`, `typography`, `color-theory`, `ai-branding`
+| 类型 | 位置 | 功能 |
+|---|---|---|
+| `concept` | `concepts/` | 解释某个概念、方法论、设计原则 |
+| `entity` | `entities/` | 记录某个品牌、产品、人物、组织的关键信息 |
+| `source` | `sources/` | 对原始材料的结构化摘要，带关键论点提取 |
+| `query` | `queries/` | 将高质量问答回收为可复用的知识片段 |
+| `synthesis` | `synthesis/` | 多来源综合分析、流水线总结 |
+| `comparison` | `comparisons/` | 对比分析、A/B 框架、趋势对照 |
 
-**产品经理**：`user-research`, `requirement-analysis`, `product-strategy`, `growth`, `ux`, `data-driven`
+---
 
-**软技能**：`self-improvement`, `productivity`, `focus`, `systems-thinking`, `communication`, `identity`, `cybernetics`, `mental-energy`
+## 3. 命名与链接规范
 
-## 页面创建阈值
+- 文件名：小写英文，用连字符连接，无空格
+- 交叉引用：使用 Obsidian wikilink `[[page-name]]`
+- 每个页面至少包含 2 个出站 `[[wikilinks]]` 链接
+- 来源页面必须链接到其原始 raw 文件
 
-- **创建页面**：当一个实体/概念出现在 2+ 个来源中，或是某篇来源的核心主题
-- **添加到现有页面**：当来源提及已涵盖的内容时
-- **不创建页面**：仅被简单提及的内容、次要细节
+---
 
-## 冲突解决策略
+## 4. 三个核心操作
 
-当新信息与现有内容冲突时：
-1. 检查日期 — 较新的来源通常优先
-2. 如果存在矛盾，注明两种观点及其日期和来源
-3. 在 frontmatter 中标记：`contradictions: [页面名称]`
-4. 在 log.md 中记录待审核事项
+| 操作 | 功能 | 输出 |
+|---|---|---|
+| **Ingest** | 向知识库添加新来源，提取并编译 | raw/ + sources/ + entities/ + concepts/ + index更新 |
+| **Query** | 基于已编译知识回答问题 | 回答文本 + 可回收为 queries/ 页面 |
+| **Lint** | 检查知识库健康状态 | 孤儿页面、断链、缺少 frontmatter 报告 |
+
+---
+
+## 5. 维护协议
+
+1. 每次 ingest 必须记录 log.md
+2. 每周运行 lint 检查
+3. 优先更新已有页面，避免创建孤儿页面
+4. 重复内容归入 synthesis/，不在 concepts/ 重叠
+5. 不删除 .git 历史，重构以正常 commit 序列进行

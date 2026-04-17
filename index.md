@@ -1,76 +1,66 @@
-# Quokka Wiki
+# Index
 
-Ethan Li 的个人知识库。基于 LLM Wiki 理论构建，服务于四个职业身份的实践与成长。
+Quokka LLM Wiki 内容目录。本页面由 LLM 维护，用于快速定位知识库中的页面。
 
-## 四角色入口
+---
 
-<div class="grid">
+## 按类型索引
 
-<a href="/Quokka-llm-wiki/wiki/concepts/#包装" class="card">
-  <div class="icon">📦</div>
-  <div class="title">包装设计师</div>
-  <div class="desc">材料、结构、工艺、趋势与案例</div>
-</a>
+### 概念 Concepts
+> `concepts/` — 理论、方法论、设计原则
 
-<a href="/Quokka-llm-wiki/wiki/concepts/#品牌" class="card">
-  <div class="icon">🎨</div>
-  <div class="title">品牌设计师</div>
-  <div class="desc">视觉识别、品牌策略、重塐案例</div>
-</a>
+暂无页面
 
-<a href="/Quokka-llm-wiki/wiki/concepts/#pm" class="card">
-  <div class="icon">📊</div>
-  <div class="title">产品经理</div>
-  <div class="desc">用户研究、策略、项目管理</div>
-</a>
+### 实体 Entities
+> `entities/` — 品牌、产品、人物、组织
 
-<a href="/Quokka-llm-wiki/wiki/concepts/#软技能" class="card">
-  <div class="icon">🧠</div>
-  <div class="title">软技能</div>
-  <div class="desc">沟通、思维、成长、系统</div>
-</a>
+暂无页面
 
-</div>
+### 来源 Sources
+> `sources/` — 原始素材的结构化摘要
 
-## 站点信息
+暂无页面
 
-- [Purpose](/Quokka-llm-wiki/purpose) — Wiki 的存在意义
-- [Schema](/Quokka-llm-wiki/schema) — 知识库结构规范
-- [Agents](/Quokka-llm-wiki/agents) — AI 操作规范
-- [Overview](/Quokka-llm-wiki/overview) — 全局摘要
-- [Log](/Quokka-llm-wiki/wiki/log) — 更新日志
-- [GitHub](https://github.com/lihuluu/Quokka-llm-wiki) — 源代码
+### 问答 Queries
+> `queries/` — 回收的高质量问答
 
-<style>
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 24px;
-}
-.card {
-  display: block;
-  padding: 20px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: border-color 0.2s;
-}
-.card:hover {
-  border-color: var(--vp-c-brand);
-}
-.icon {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-.title {
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--vp-c-text-1);
-}
-.desc {
-  font-size: 13px;
-  color: var(--vp-c-text-2);
-  margin-top: 4px;
-}
-</style>
+暂无页面
+
+### 综合 Synthesis
+> `synthesis/` — 多来源综合分析
+
+暂无页面
+
+### 对比 Comparisons
+> `comparisons/` — 框架、案例、趋势对比
+
+暂无页面
+
+---
+
+## 按角色索引
+
+| 角色 | 标签 | 目前页面数 |
+|---|---|---|
+| 📦 包装设计 | `packaging` | 0 |
+| 🎨 品牌设计 | `branding` | 0 |
+| 📊 产品经理 | `pm` | 0 |
+| 🧠 软技能 | `soft-skills` | 0 |
+
+---
+
+## 统计
+
+- 总页面数：0
+- 最近更新：2026-04-17
+- 最新 ingest：无
+
+---
+
+## 系统文件
+
+- [Purpose](purpose.md) — 知识库存在的原因
+- [Schema](schema.md) — 结构规范
+- [Log](log.md) — 操作记录
+- [Overview](overview.md) — 全局摘要
+- [Agents](agents.md) — AI 操作规范

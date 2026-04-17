@@ -1,29 +1,41 @@
-# Quokka Wiki
+# Quokka LLM Wiki
 
-> 一个专注于**包装设计**领域的个人知识库。
+面向包装设计师的四角色职业知识库。
 
-## 简介
+## 架构
 
-Quokka Wiki 收集、整理并分享包装设计相关的知识、案例与洞察。知识库采用双向链接的方式组织内容，涵盖品牌案例、设计概念、行业趋势与原始资料。
+基于 [nashsu/llm_wiki](https://github.com/nashsu/llm_wiki) 实现，遵循 Karpathy 的 LLM Wiki 模式：
 
-## 目录结构
+- **三层架构**：Raw Sources → Wiki → Schema
+- **三个核心操作**：Ingest / Query / Lint
+- **四角色标签**：包装设计 / 品牌设计 / 产品经理 / 软技能
+
+## 目录
 
 ```
-entities/          # 实体：品牌、公司、产品等
-concepts/          # 概念：方法论、设计理论、技术等
-raw/               # 原始资料：剪藏文章、一手素材
-SCHEMA.md          # 知识库规范与标签体系
-log.md             # 操作日志
+├── purpose.md       # Wiki 的灵魂
+├── schema.md        # 结构规范
+├── index.md         # 内容目录
+├── log.md           # 操作记录
+├── overview.md      # 全局摘要
+├── agents.md        # AI 操作规范
+├── concepts/        # 概念与方法论
+├── entities/        # 品牌、产品、人物
+├── sources/         # 来源摘要
+├── queries/         # 问答结晶
+├── synthesis/       # 综合分析
+├── comparisons/     # 对比分析
+└── raw/
+    ├── sources/     # 原始素材
+    └── assets/      # 图片资源
 ```
 
-## 访问网站
+## 部署
 
-在线版本部署在 GitHub Pages：
-https://lihuluu.github.io/Quokka-llm-wiki/
+VitePress 静态站点，通过 GitHub Actions 部署到 GitHub Pages。
 
-## 使用规范
+## 同步
 
-- 所有页面必须包含 YAML frontmatter
-- 每个页面必须通过 `sources` 指向原始资料
-- 页面间至少包含 2 个出站双向链接
-- 文件名使用小写英文字母与连字符
+- Obsidian + Dropbox — 设备间实时同步
+- 定时 Git 备份 — 每小时自动提交
+- 每日 09:00 CST 自动部署
