@@ -1,3 +1,10 @@
+---
+title: "Purpose"
+date: 2026-04-17
+type: meta
+tags: ["system", "purpose"]
+---
+
 # Purpose
 
 ## Why this wiki exists

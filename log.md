@@ -1,3 +1,10 @@
+---
+title: "Log"
+date: 2026-04-17
+type: meta
+tags: ["system", "log"]
+---
+
 # Log
 
 知识库操作时序记录。每次 ingest、query、lint 均应在此留痕。

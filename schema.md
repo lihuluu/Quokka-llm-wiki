@@ -1,3 +1,10 @@
+---
+title: "Schema 规范"
+date: 2026-04-17
+type: meta
+tags: ["system", "schema"]
+---
+
 # Schema 规范
 
 本文件定义知识库的结构规范、元数据标准和维护协议。

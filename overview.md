@@ -1,3 +1,10 @@
+---
+title: "Overview"
+date: 2026-04-17
+type: meta
+tags: ["system", "overview"]
+---
+
 # Overview
 
 Quokka LLM Wiki 全局摘要。本页面在每次 ingest 后自动重新生成，反映当前知识库的整体状态。
