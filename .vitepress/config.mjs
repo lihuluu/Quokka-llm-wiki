@@ -3,117 +3,110 @@ import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 
 export default defineConfig({
   title: 'Quokka Wiki',
-  description: '包装设计知识库',
+  description: 'Ethan Li 的个人知识库 — 产品经理 × 包装设计师 × 品牌设计师 × 软技能',
   lang: 'zh-CN',
-  
-  // 部署到 GitHub Pages
+
   base: '/Quokka-llm-wiki/',
-  
-  // 现代主题配置
   appearance: 'dark',
-  
-  // 最后更新时间
   lastUpdated: true,
-  
-  // 忽略死链接检查（Obsidian 双向链接格式）
   ignoreDeadLinks: true,
-  
-  // 主题配置
+
   themeConfig: {
-    // Logo
     logo: '🦘',
-    
-    // 导航栏
+
     nav: [
       { text: '首页', link: '/' },
-      { text: '实体', link: '/entities/perplexity' },
-      { text: '概念', link: '/concepts/ai-branding' },
+      { text: 'Wiki', link: '/wiki/' },
+      { text: 'Schema', link: '/schema' },
+      { text: 'Agents', link: '/agents' },
       { text: 'GitHub', link: 'https://github.com/lihuluu/Quokka-llm-wiki' }
     ],
-    
-    // 侧边栏
+
     sidebar: {
-      '/': [
-        {
-          text: '实体',
-          collapsed: false,
-          items: [
-            { text: 'MUJI', link: '/entities/muji/design-system-report' },
-            { text: 'Perplexity', link: '/entities/perplexity' },
-            { text: 'Puma', link: '/entities/puma' },
-            { text: 'Smith & Diction', link: '/entities/smith-and-diction' }
-          ]
-        },
+      '/wiki/': [
+        { text: 'Wiki 概览', link: '/wiki/' },
+        { text: '操作日志', link: '/wiki/log' },
         {
           text: '概念',
           collapsed: false,
           items: [
-            { text: '设计师的21天挑战', link: '/concepts/designer-21-day-challenge' },
-            { text: '无可阻挡的21天挑战', link: '/concepts/unstoppable-21-day-challenge' },
-            { text: 'AI 品牌设计', link: '/concepts/ai-branding' },
-            { text: '单一材料设计', link: '/concepts/mono-material-design' },
-            { text: '可持续包装', link: '/concepts/sustainable-packaging' }
+            { text: '单一材料设计', link: '/wiki/concepts/mono-material-design' },
+            { text: '可持续包装', link: '/wiki/concepts/sustainable-packaging' },
+            { text: '瓦楞厚度', link: '/wiki/concepts/corrugated-flute-types' },
+            { text: 'AI 品牌设计', link: '/wiki/concepts/ai-branding' },
+            { text: '21 天挑战', link: '/wiki/concepts/designer-21-day-challenge' },
+            { text: '无可阻挡的 21 天', link: '/wiki/concepts/unstoppable-21-day-challenge' },
+            { text: '反愿景', link: '/wiki/concepts/anti-vision' },
+            { text: '控制论智能', link: '/wiki/concepts/cybernetics-intelligence' },
+            { text: 'Human 3.0', link: '/wiki/concepts/human-3-0-model' },
+            { text: '身份驱动改变', link: '/wiki/concepts/identity-driven-change' },
+            { text: '僧侣模式', link: '/wiki/concepts/monk-mode' },
+            { text: '生命熵', link: '/wiki/concepts/entropy-in-life' },
+          ]
+        },
+        {
+          text: '实体',
+          collapsed: false,
+          items: [
+            { text: 'MUJI', link: '/wiki/entities/muji/design-system-report' },
+            { text: 'Perplexity', link: '/wiki/entities/perplexity' },
+            { text: 'Puma', link: '/wiki/entities/puma' },
+            { text: 'Smith & Diction', link: '/wiki/entities/smith-and-diction' },
           ]
         },
         {
           text: '原始资料',
           collapsed: true,
           items: [
-            { text: '《无可阻挡的21天挑战》摘要', link: '/raw/articles/unstoppable-21-day-challenge-summary' },
-            { text: 'Perplexity 品牌案例', link: '/raw/articles/perplexity-brand-redesign-uisdc' },
-            { text: '可持续包装趋势', link: '/raw/articles/sustainable-packaging-trends-2025' }
+            { text: '可持续包装趋势 2025', link: '/raw/sources/sustainable-packaging-trends-2025' },
+            { text: 'MUJI 设计系统报告', link: '/raw/sources/muji-design-system-report-sources' },
+            { text: '瓦楞厚度指南', link: '/raw/sources/corrugated-flute-types-guide' },
+            { text: 'Perplexity 品牌重设计', link: '/raw/sources/perplexity-brand-redesign-uisdc' },
+            { text: '无可阻挡的 21 天摘要', link: '/raw/sources/unstoppable-21-day-challenge-summary' },
+            { text: '如何在一天内修复人生', link: '/raw/sources/how-to-fix-your-life-in-one-day' },
           ]
         }
       ]
     },
-    
-    // 社交链接
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lihuluu' }
     ],
-    
-    // 页脚
+
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2024-present Ethan Li'
     },
-    
-    // 搜索配置
+
     search: {
       provider: 'local'
     },
-    
-    // 文档页脚
+
     docFooter: {
       prev: '上一页',
       next: '下一页'
     },
-    
-    // 编辑链接
+
     editLink: {
       pattern: 'https://github.com/lihuluu/Quokka-llm-wiki/edit/main/:path',
       text: '在 GitHub 上编辑此页'
     },
-    
-    // 大纲配置
+
     outline: {
       label: '页面导航'
     },
-    
-    // 最后更新时间文本
+
     lastUpdated: {
       text: '最后更新于'
     }
   },
-  
-  // 自定义 CSS
+
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap', rel: 'stylesheet' }]
   ],
 
-  // 支持 Obsidian 双向链接语法
   markdown: {
     config: (md) => {
       md.use(BiDirectionalLinks())

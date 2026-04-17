@@ -1,43 +1,76 @@
 # Quokka Wiki
 
-> 包装设计与个人系统的累积式知识库
+Ethan Li 的个人知识库。基于 LLM Wiki 理论构建，服务于四个职业身份的实践与成长。
 
----
+## 四角色入口
 
-## 包装设计
+<div class="grid">
 
-### 设计理论与方法
-- [ai-branding](/concepts/ai-branding)
+<a href="/Quokka-llm-wiki/wiki/concepts/#包装" class="card">
+  <div class="icon">📦</div>
+  <div class="title">包装设计师</div>
+  <div class="desc">材料、结构、工艺、趋势与案例</div>
+</a>
 
-### 材料与结构
-- [corrugated-flute-types](/concepts/corrugated-flute-types)
-- [mono-material-design](/concepts/mono-material-design)
-- [sustainable-packaging](/concepts/sustainable-packaging)
+<a href="/Quokka-llm-wiki/wiki/concepts/#品牌" class="card">
+  <div class="icon">🎨</div>
+  <div class="title">品牌设计师</div>
+  <div class="desc">视觉识别、品牌策略、重塐案例</div>
+</a>
 
-### 品牌实体
-- [muji/design-system-report](/entities/muji/design-system-report)
-- [perplexity](/entities/perplexity)
-- [puma](/entities/puma)
-- [smith-and-diction](/entities/smith-and-diction)
+<a href="/Quokka-llm-wiki/wiki/concepts/#pm" class="card">
+  <div class="icon">📊</div>
+  <div class="title">产品经理</div>
+  <div class="desc">用户研究、策略、项目管理</div>
+</a>
 
----
+<a href="/Quokka-llm-wiki/wiki/concepts/#软技能" class="card">
+  <div class="icon">🧠</div>
+  <div class="title">软技能</div>
+  <div class="desc">沟通、思维、成长、系统</div>
+</a>
 
-## 个人系统与生产力
+</div>
 
-### 核心概念
-- [anti-vision](/concepts/anti-vision)
-- [cybernetics-intelligence](/concepts/cybernetics-intelligence)
-- [entropy-in-life](/concepts/entropy-in-life)
-- [human-3-0-model](/concepts/human-3-0-model)
-- [identity-driven-change](/concepts/identity-driven-change)
-- [monk-mode](/concepts/monk-mode)
+## 站点信息
 
-### 工作流与实践
-- [designer-21-day-challenge](/concepts/designer-21-day-challenge)
-- [unstoppable-21-day-challenge](/concepts/unstoppable-21-day-challenge)
+- [Purpose](/Quokka-llm-wiki/purpose) — Wiki 的存在意义
+- [Schema](/Quokka-llm-wiki/schema) — 知识库结构规范
+- [Agents](/Quokka-llm-wiki/agents) — AI 操作规范
+- [Overview](/Quokka-llm-wiki/overview) — 全局摘要
+- [Log](/Quokka-llm-wiki/wiki/log) — 更新日志
+- [GitHub](https://github.com/lihuluu/Quokka-llm-wiki) — 源代码
 
----
-
-## 原始材料
-
-- [raw/](/raw/)
+<style>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+.card {
+  display: block;
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.card:hover {
+  border-color: var(--vp-c-brand);
+}
+.icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--vp-c-text-1);
+}
+.desc {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin-top: 4px;
+}
+</style>
